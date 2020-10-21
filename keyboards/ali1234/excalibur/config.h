@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT_ID      0x0001 // 78
 #define DEVICE_VER      0x0002
 #define MANUFACTURER    Drevo
-#define PRODUCT         Excaliburd
+#define PRODUCT         Excalibur
 #define DESCRIPTION     QMK keyboard firmware for Drevo Excalibur
 
 /* key matrix size */
@@ -33,18 +33,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_COLS 17
 
 /* key matrix pins */
-#define MATRIX_ROW_PINS { C2, C3, C4, C5, C6, C7 }
-#define MATRIX_COL_PINS { E0, F7, F6, F5, F4, F3, F2, F1, F0, E6, E7, B0, B1, D2, D3, D4, D5 }
+#define MATRIX_ROW_PINS { A0, A1, A2, A3, A4, A5 }
+#define MATRIX_COL_PINS { E1, F7, F6, F5, F4, F3, F2, F1, F0, E6, E7, B0, B1, E0, D4, D5, D7 }
 #define UNUSED_PINS
 
 /* COL2ROW or ROW2COL */
-#define DIODE_DIRECTION COL2ROW
+#define DIODE_DIRECTION ROW2COL
 
-/* number of backlight levels */
-#define BACKLIGHT_PIN D0
-#ifdef BACKLIGHT_PIN
+#define LED_DRIVER_LED_COUNT       (85)
+
+
 #define BACKLIGHT_LEVELS 3
-#endif
+
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5

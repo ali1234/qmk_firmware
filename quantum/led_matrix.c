@@ -353,4 +353,6 @@ void led_matrix_set_value(uint8_t val) {
     eeconfig_update_led_matrix(led_matrix_config.raw);
 }
 
-void backlight_set(uint8_t val) { led_matrix_set_value(val); }
+void backlight_set(uint8_t val) {
+//    led_matrix_set_value(val);
+}

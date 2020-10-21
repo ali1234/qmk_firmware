@@ -9,7 +9,7 @@ MCU = at90usb1286
 #   QMK DFU      qmk-dfu
 #   ATmega32A    bootloadHID
 #   ATmega328P   USBasp
-BOOTLOADER = atmel-dfu
+BOOTLOADER = halfkay
 
 # Build Options
 #   comment out to disable the options.
@@ -17,10 +17,19 @@ BOOTLOADER = atmel-dfu
 BOOTMAGIC_ENABLE = no	# Virtual DIP switch configuration
 MOUSEKEY_ENABLE = no	# Mouse keys
 EXTRAKEY_ENABLE = yes	# Audio control and System control
-CONSOLE_ENABLE = no	# Console for debug
-COMMAND_ENABLE = no    # Commands for debug and configuration
-SLEEP_LED_ENABLE = no  # Breathing sleep LED during USB suspend
+CONSOLE_ENABLE = no		# Console for debug
+COMMAND_ENABLE = no		# Commands for debug and configuration
+SLEEP_LED_ENABLE = no	# Breathing sleep LED during USB suspend
 NKRO_ENABLE = yes		# USB Nkey Rollover - if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
-BACKLIGHT_ENABLE = yes  # Enable keyboard backlight functionality
+BACKLIGHT_ENABLE = no	# Enable keyboard backlight functionality
 AUDIO_ENABLE = no
 RGBLIGHT_ENABLE = no
+
+CUSTOM_MATRIX = yes
+LED_MATRIX_ENABLE = custom
+#BACKLIGHT_DRIVER = custom
+
+BACKLIGHT_LEVELS = 31
+
+
+SRC += matrix.c led_matrix.c
