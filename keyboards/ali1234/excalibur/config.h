@@ -40,11 +40,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION ROW2COL
 
+#define DRIVER_LED_TOTAL       (85)
 #define LED_DRIVER_LED_COUNT       (85)
 
+#define RGB_MATRIX_CENTER { 64, 20 }
 
-#define BACKLIGHT_LEVELS 3
-
+#define RGB_MATRIX_KEYPRESSES
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_TYPING_HEATMAP
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
@@ -54,15 +57,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Locking resynchronize hack */
 //#define LOCKING_RESYNC_ENABLE
-
-/* ws2812b options */
-//#define RGB_DI_PIN F6
-#ifdef RGB_DI_PIN
-#define RGBLIGHT_ANIMATIONS
-#define RGBLED_NUM 20
-#define RGBLIGHT_HUE_STEP 8
-#define RGBLIGHT_SAT_STEP 8
-#define RGBLIGHT_VAL_STEP 8
-#endif
 
 #endif

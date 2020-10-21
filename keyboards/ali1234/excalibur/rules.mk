@@ -14,7 +14,7 @@ BOOTLOADER = halfkay
 # Build Options
 #   comment out to disable the options.
 #
-BOOTMAGIC_ENABLE = no	# Virtual DIP switch configuration
+BOOTMAGIC_ENABLE = yes	# Virtual DIP switch configuration
 MOUSEKEY_ENABLE = no	# Mouse keys
 EXTRAKEY_ENABLE = yes	# Audio control and System control
 CONSOLE_ENABLE = no		# Console for debug
@@ -26,7 +26,7 @@ AUDIO_ENABLE = no
 RGBLIGHT_ENABLE = no
 
 CUSTOM_MATRIX = yes
-LED_MATRIX_ENABLE = custom
+RGB_MATRIX_ENABLE = custom
 #BACKLIGHT_DRIVER = custom
 
 BACKLIGHT_LEVELS = 31
